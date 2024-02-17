@@ -38,37 +38,41 @@ nav a {
 }
 
 .project-card {
-  position: relative;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 .project-card img {
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.project-card:hover img {
-  opacity: 1;
-}
-
-.project-card-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
+  max-width: 300px;
+  margin-bottom: 10px;
 }
 
-.project-card:hover .project-card-text {
-  opacity: 1;
+.project-card p {
+  line-height: 1.5;
 }
 
-.project-card-text h3,
-.project-card-text p {
+.project-card a {
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.project-card a:hover {
+  background-color: #007bff;
   color: #fff;
 }
+        
 
     </style>
 </head>
