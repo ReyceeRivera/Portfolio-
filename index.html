@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: beige;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+#about {
+  background-image: url("sunset.jpg"); 
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  color: white; 
+  font-size: 1.2em; 
+  text-align: justify;  
+}
+
+.project-card {
+  position: relative;
+}
+
+.project-card img {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-card:hover img {
+  opacity: 1;
+}
+
+.project-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.project-card:hover .project-card-text {
+  opacity: 1;
+}
+
+.project-card-text h3,
+.project-card-text p {
+  color: #fff;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <section id="home">
+        <h1>Hi, it's me... Reycee M. Rivera</h1>
+        <h2>Im a Student Web Developer and with a strong foundation in HTML, CSS, and JavaScript, I excel in creating responsive and visually stunning interfaces that captivate users across devices. I'm also proficient in various frameworks and libraries such as React.js, Angular, and Vue.js, enabling me to build dynamic and feature-rich web solutions.
+
+<br>Beyond code, I prioritize collaboration and communication, working closely with clients and cross-functional teams to understand project goals and deliver tailor-made solutions that exceed expectations. Whether it's optimizing website performance, implementing complex functionalities, or staying updated with the latest web technologies, I'm committed to continuous learning and innovation to stay ahead in this ever-evolving digital landscape.
+</br>
+</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#aboutme">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="aboutme">
+    <h2>About Me</h2>
+    <p>Hi there! My name is Reycee M. Rivera, and I'm a dedicated student web developer on a mission to turn my passion for coding into meaningful projects. Currently pursuing my degree in Bachelor of Science in Information Technology with a focus on web development, I'm deeply fascinated by the intersection of design and technology.</p>
+    <p>Driven by curiosity and a love for problem-solving, I've immersed myself in learning various programming languages and web development frameworks. From HTML and CSS to JavaScript and beyond, I'm constantly honing my skills to build sleek and functional websites and web applications.</p>
+    <p>As a student, I've had the opportunity to work on diverse projects, including personal portfolios, e-commerce websites, and collaborative team projects. Through hands-on experience and continuous experimentation, I've gained insights into the intricacies of front-end and back-end development, UI/UX design, and responsive web design principles.</p>
+    <p>Beyond the code, I'm passionate about staying updated with the latest industry trends and technologies, attending workshops, and participating in hackathons to expand my knowledge and network with like-minded individuals.</p>
+    <p>I'm eager to contribute my skills and creativity to real-world projects, learn from experienced professionals, and make a positive impact in the world of web development. Let's connect and explore exciting opportunities together!</p>
+</section>
+
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="project-card">
+                <h4>Project 1</h4>
+                <img src="project1.jpg" alt="Project 1 image">
+                <p>This is my Color Changer</p>
+            </div>
+            </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Reycee Rivera</p>
+    </footer>
+
+    <script src="script.js">
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const sectionId = this.getAttribute('href');
+    const section = document.querySelector(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
