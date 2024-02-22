@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
+            background: "univ3.jpeg";
+            background-image: url(univ3.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
             font-family: sans-serif;
             margin: 0;
             padding: 20px;
-            background-image: url("universe.jpg");
-            background-size: cover;
-            background-position: center;
         }
 
         header {
-            background-color: beige;
+            background-color: rgb(41, 43, 44);
             padding: 20px;
+            border-radius: 10%;
+            color: rgb(143, 137, 137);
+            font-size: 1.2em;
+            text-align: justify;
         }
 
         nav {
@@ -26,23 +31,55 @@
         }
 
         nav a {
-            text-decoration: none;
-            padding: 10px;
+            background-color: #3e2c39;
+         color: #e4f5ce;
+         padding: 10px 20px;
+         border: 2px solid #ddd;
+         border-radius: 50px;
+         cursor: pointer;
+         font-size: medium;
+         animation: bounce 0.2s ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        nav a:hover{
+            background-color: #e6cc65;
         }
 
-        #about {
-            background-image: url("sunset.jpg");
-            background-size: cover;
-            background-position: center;
-            padding: 30px;
+        #home-button {
+         background-color: #e3e2f0;
+         color: #ddd;
+         padding: 10px 20px;
+         border: 2px solid #110d0d;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: all 0.2s ease-in-out;
+
+        }
+
+        #aboutme {
+            padding: 20px;
             color: white;
             font-size: 1.2em;
             text-align: justify;
         }
 
         .project-card {
+            background-color: #141323;
+            color: rgb(230, 176, 176);
             border: 2px solid #ddd;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(138, 134, 134, 0.2);
             padding: 20px;
             margin-bottom: 20px;
         }
@@ -54,7 +91,7 @@
 
         .project-card img {
             width: 50%;
-            max-width: 300px;
+            max-width: 150px;
             border-radius: 20%; 
             margin-bottom: 10px;
         }
@@ -73,15 +110,13 @@
         }
 
         .project-card a:hover {
-            background-color: #007bff;
+            background-color: #d9f667;
             color: #fff;
         }
 
         #contact {
-            background-color: #f5f5f5;
-            padding: 30px;
-            border-radius: 5px;
-            margin-top: 20px;
+            background: "universe1.jpeg";
+            background-image: url(universe1.jpeg);
         }
 
         #contact h2 {
@@ -94,23 +129,28 @@
         }
 
         #contact input, #contact textarea {
-            border: 1px solid #ccc;
+            border: 3px solid #17171e;
             padding: 10px;
-            width: 100%;
+            width: 80%;
             margin-bottom: 15px;
+            padding: 10px 20px;
+         border: 2px solid #ddd;
+         border-radius: 50px;
         }
 
         #contact button {
             background-color: blue;
             color: #fff;
             padding: 10px 20px;
-            border: none;
+            border: 3px solid black;
             border-radius: 5px;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
         }
 
         #contact button:hover {
-            background-color: orange;
+            background-color: rgb(152, 20, 18);
         }
 
         #home, #aboutme {
@@ -159,6 +199,14 @@
                 <h4>Project 1</h4>
                 <img src="project1.jpg" alt="Project 1 image">
                 <p>This is my Color Changer</p>
+
+                <h4>Project 2</h4>
+                <img src="project2.jpg" alt="Project 2 image">
+                <p>This is my Project 2</p>
+
+                <h4>Project 3</h4>
+                <img src="project3.jpg" alt="Project 3 image">
+                <p>This is my P3</p>
             </div>
             </section>
 
