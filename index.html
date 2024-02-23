@@ -74,33 +74,52 @@
             text-align: justify;
         }
 
-        .project-card {
-            background-color: #141323;
+        .work-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .works-card {
+            background-color: #262530;
             color: rgb(230, 176, 176);
             border: 2px solid #ddd;
             border-radius: 50px;
             box-shadow: 0 4px 8px rgba(138, 134, 134, 0.2);
             padding: 20px;
             margin-bottom: 20px;
+            flex: 0 0 30%;
+            margin: 10px;
         }
 
-        .project-card h3 {
+        .works-card h3 {
             font-size: 1.2em;
             margin-bottom: 10px;
         }
 
-        .project-card img {
-            width: 50%;
-            max-width: 150px;
-            border-radius: 20%; 
-            margin-bottom: 10px;
+        .works-card img {
+            width: 80%;
+            max-width: 50%;
+            border: 2px solid #ddd;
+            border-radius: 20%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0.7;
+            transition: opacity 0.2s ease-in-out;
+            margin-left: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .project-card p {
+        .works-card:hover img{
+            opacity: 1;
+        }
+
+        .works-card p {
             line-height: 1.5;
         }
 
-        .project-card a {
+        .works-card a {
             text-decoration: none;
             color: #007bff;
             border: 1px solid #007bff;
@@ -109,32 +128,43 @@
             margin-top: 10px;
         }
 
-        .project-card a:hover {
-            background-color: #d9f667;
+        .works-card a:hover {
+            background-color: #e2edb7;
             color: #fff;
         }
+
 
         #contact {
             background: "universe1.jpeg";
             background-image: url(universe1.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         #contact h2 {
             margin-bottom: 20px;
+            color: #afaebe;
         }
 
         #contact label {
             display: block;
             margin-bottom: 5px;
+            color: #fbf6f6;
         }
 
         #contact input, #contact textarea {
-            border: 3px solid #17171e;
+            background-color: #3e2c39;
             padding: 10px;
-            width: 80%;
+            width: 100%;
             margin-bottom: 15px;
+            color: #b9b8b8;
+            margin-top: 10px;
             padding: 10px 20px;
-         border: 2px solid #ddd;
+         border: 2px solid #c2b0b0;
          border-radius: 50px;
         }
 
@@ -143,14 +173,35 @@
             color: #fff;
             padding: 10px 20px;
             border: 3px solid black;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            display: flex;
-            justify-content: center;
+            margin-top: 10px;
+            align-items: center;
         }
 
         #contact button:hover {
             background-color: rgb(152, 20, 18);
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .social-media li{
+            list-style: none;
+            margin-right: 5px;
+        }
+
+        .social-media i{
+            font-size: 24px;
+            color: #ccc;
+        }
+
+        .social-media a:hover i{
+            color: #007bff;
+            transform: scale(1.1);
         }
 
         #home, #aboutme {
@@ -163,8 +214,15 @@
             border-radius: 50%; 
         }
         
-        #projects {
+        #works {
             padding-top: 30px;
+        }
+
+        footer {
+            padding: 20px;
+            color: rgb(143, 137, 137);
+            font-size: 0.5em;
+            text-align: center;
         }
     </style>
 </head>
@@ -178,7 +236,7 @@
             <nav>
                 <a href="#home">Home</a>
                 <a href="#aboutme">About Me</a>
-                <a href="#projects">Projects</a>
+                <a href="#works">Works</a>
                 <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -193,20 +251,24 @@
 
         </section>
 
-        <section id="projects">
-            <h3>Projects</h3>
-            <div class="project-card">
-                <h4>Project 1</h4>
-                <img src="project1.jpg" alt="Project 1 image">
-                <p>This is my Color Changer</p>
+        <section id="works">
+            <h3>Works</h3>
+            <div class="works-card">
+                <h4>Work 1</h4>
+                <img src="project1.jpg" alt="Work 1 image">
+                <p>Color Changer</p>
 
-                <h4>Project 2</h4>
-                <img src="project2.jpg" alt="Project 2 image">
-                <p>This is my Project 2</p>
+                <h4>Work 2</h4>
+                <img src="button.png" alt="Work 2 image">
+                <p>JavaScript addEventListener</p>
 
-                <h4>Project 3</h4>
-                <img src="project3.jpg" alt="Project 3 image">
-                <p>This is my P3</p>
+                <h4>Work 3</h4>
+                <img src="working-calc.png" alt="Work 3 image">
+                <p>Working Calculator</p>
+
+                <h4>Work 4</h4>
+                <img src="quiz-app.png" alt="Work 4 image">
+                <p>Quiz Application</p>
             </div>
             </section>
 
@@ -219,7 +281,12 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/reycee.rivera.9?mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/ceelovesthemoon_?igsh=MWh4cnh1ZzNzeXc0Mg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <button type="submit">Send Message</button>
+            </form>
+            </ul>
             </form>
         </section>
     </main>
